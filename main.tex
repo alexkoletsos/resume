@@ -1,0 +1,266 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% and Jake Gutierrez's version of it
+% at https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% inspired by https://practicaltypography.com/resumes.html
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[left=.5in, right=.5in, top=.35in, bottom=.5in]{geometry}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{anyfontsize}
+
+%--------------UNDERLINING---------------
+% taken from https://alexwlchan.net/2017/10/latex-underlines/
+
+\usepackage{contour}
+\usepackage{ulem}
+
+\renewcommand{\ULdepth}{3.8pt}
+\contourlength{0.8pt}
+
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+%----------------------------------------
+
+\graphicspath{ {./Images/} }
+
+%----------FONT OPTIONS----------
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-0.7in}
+%\addtolength{\textheight}{1.0in}
+
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{gray}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  %\item\small{
+  \item\fontsize{9}{11}\selectfont{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% ----- TOGGLE PHOTO --------
+% comment out \iffalse and remove the % from \iftrue to toggle photo
+\iffalse
+% \iftrue
+\begin{wrapfigure}{R}{0.15\textwidth}
+\vspace{-35pt}
+\includegraphics[scale=0.20]{dp_cropped}
+\end{wrapfigure}
+\fi
+
+%----------HEADING----------
+
+\begin{center} \href{https://alexkoletsos.me}{\textbf{ \Large Alexandra Koletsos}}
+\\ \vspace{1pt}
+
+% ----- TOGGLE FOR PHOTO ----
+% \vspace{10pt}
+
+
+ %New York, NY $|$
+\href{mailto:ak4749@columbia.edu}{
+    \myuline{ak4749@columbia.edu}} $|$
+\href{https://linkedin.com/in/ak4749/}{
+    \myuline{LinkedIn}} $|$
+\href{https://github.com/alexkoletsos}{
+    \myuline{GitHub}} $|$
+(203) 820-7735
+\end{center}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Columbia University in the City of New York }{New York, NY}
+      {Bachelor's in Computer Science and Mathematics}{Expected May 2025}
+      \resumeItemListStart
+      
+        \resumeItem{GPA: 3.7/4.0}
+        \resumeItem{Relevant Coursework: Artificial Intelligence, Natural Language Processing, Abstract Algebra, CS Theory, Advanced Programming in C, DS\&A in Java}
+        
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Norwalk High School}{Norwalk, CT}
+      {High School Diploma}{Aug 2017 -- Jun 2021}
+      \resumeItemListStart
+      
+        \resumeItem{Awards \& Honors: Valedictorian, Kevin M. Eidt Scholarship}
+
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Technical}{: Java, Python, C, Magma, LaTeX, Jupyter Notebook, VS Code, MS Office (Word, Excel, Powerpoint)} \\
+     \textbf{Languages}{: Greek, Spanish, English} \\
+     }
+    }
+ \end{itemize}
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {Department of Mathematics, Texas A\&M University-Commerce}{Commerce, TX}
+      {Lead Undergraduate Researcher}{Jun 2023 -- Aug 2023}
+      \resumeItemListStart
+        \resumeItem{Developed a unique construction of multidimensional circulant (MDC) graphs, a generalization of circulant graphs, using Magma, a computer algebra programming language}
+        \resumeItem{Implemented an exhaustive search process for new quantum codes from MDC graphs via self-dual additive codes with Magma, resulting in the discovery of 7 new quantum codes}
+        \resumeItem{Investigated graph-theoretic properties of MDC graphs to optimize original program's generation of quantum codes, thereby strengthening critical thinking and proof writing skills}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Department of Mathematics, Columbia University}{New York, NY}
+      {Head Calculus Teaching Assistant}{Jan 2023 -- Present}
+      \resumeItemListStart
+        \resumeItem{Facilitate weekly office hours, providing one-on-one assistance to students with general and homework-specific questions related to all levels of calculus}
+        \resumeItem{Create homework answer keys to evaluate students' work, grading over 300 problems per week}
+        %add communication with students?
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+\section{Personal Projects} %figure out how to write this
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\href{https://github.com/alexkoletsos/lexical-substitution-task}{\textbf{Lexical Substitution Task}} $|$ \textit{Python, WordNet, Gensim, Word2Vec, DistilBERT, Tensorflow}}{Nov 2023}
+          \resumeItemListStart
+            \resumeItem {Refined the Lesk algorithm by incorporating examples, hypernym examples, and hypernym definitions for each synset of a target word in computing an aggregate overlap score with context to enhance WSD precision by 10\%}
+            \resumeItem {Leveraged WordNet to identify potential substitutes for a target word and selected the candidate with the highest prediction score in the target position using a pre-trained DistilBERT model}
+            %\resumeItem {hm}
+          \resumeItemListEnd
+      \resumeProjectHeading
+        %{\href{https://github.com/alexkoletsos/sl-cnn}{\textbf{Hand Gesture Classifier}} $|$ \textit{Jupyter Notebook, Python, Keras, scikit-learn}}{Nov 2023}
+          %\resumeItemListStart
+            %\resumeItem {hm}
+            %\resumeItem {hm}            
+          %\resumeItemListEnd
+      %\resumeProjectHeading
+          {\href{https://github.com/alexkoletsos/dynamic-web-server}{\textbf{Dynamic Web Server}} $|$ \textit{C, HTML, Linux}}{Dec 2022}
+          \resumeItemListStart
+            \resumeItem{Constructed a server socket in C to efficiently handle multiple simultaneous HTTP GET requests from clients with forking}
+            \resumeItem{Established a robust TCP connection between the web server and a MySQL database to fulfill HTTP/1.0 responses with real-time data}
+            \resumeItem{ Implemented an interactive HTML table to present search results, enhancing user experience and data accessibility}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%-----------PUBLICATIONS & PRESENTATIONS-----------
+\section{Publications \& Presentations}
+   \begin{itemize}[leftmargin=0.15in, label={}]
+    \item{\small{{P. Seneviratne, H. Cuff, \textbf{A. Koletsos}, K. Seekamp and A. Thananopavarn, \textit{New Qubit Codes from Multidimensional Circulant Graphs}, arXiv preprint, \href{https://arxiv.org/pdf/2309.01798.pdf}{https://arxiv.org/pdf/2309.01798}}}} %\\ %\vspace{2pt}Poster: \href{https://meetings.ams.org/math/jmm2024/meetingapp.cgi/Paper/27211}{\textit{Quantum Error-Correcting Codes from Multidimensional Circulant Graphs}}, Joint Mathematics Meeting, San Francisco, CA, Jan 3-6, 2024.}}
+ \end{itemize}
+%-----------Activities-----------
+\section{Activities \& Leadership}
+    \resumeSubHeadingListStart
+      \resumeSubheading
+      {Columbia Women's Ultimate Frisbee Team}{New York, NY}
+      {Logistics Coordinator}{Sep 2022 -- Present}
+      \resumeItemListStart
+        \resumeItem{Dedicate 12 hours per week to practice and team meetings year-round, with weekend-long tournaments in the spring}
+        \resumeItem{Plan and manage the \$10,000 club annual budget, coordinating local and out-of-state tournament-related expenses}
+      \resumeItemListEnd
+      \resumeSubheading
+      {Community Impact, Columbia University}{New York, NY}
+      {GED Math Teacher, Head After-Hours Tutor}{Sep 2021 -- May 2022}
+      \resumeItemListStart
+        \resumeItem{Developed unique GED test-prep curriculum to prepare low-income adults in NYC for the high school equivalency exam}
+        \resumeItem{Maintained over 80\% attendance throughout the semester and organized one-on-one tutoring sessions tailored to the preferred learning style of each individual student}
+      \resumeItemListEnd
+     \resumeSubheading
+     {Jumpstarting Aspiring Developers and Entrepreneurs}{New York, NY}
+     {Selected Student Member}{Dec 2021 -- Jan 2022}
+      \resumeItemListStart
+        \resumeItem{Attended web-dev workshops in HTML, CSS, and JS, and applied these skills to develop my own personal website}
+        \resumeItem{Visited Fortune 500 companies, attending Q\&A panels with company CEOs and engineers to discuss impactful real-world applications of CS}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%-----------Additional Information-----------
+\section{Additional Information}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Awards \& Honors}{: Dean's List ($\times$3), Columbia University Student of the Month (April 2023), Columbia University Class of 1956 Alan N. Miller Scholarship, Joint Mathematics Meeting Presenter} \\
+     \textbf{Other Activities}{: First-Generation and Low-Income Partnership (FGLIP), Columbia New Student Orientation Leader}%, Columbia EcoReps} \\
+     }
+    }
+ \end{itemize}
+%-------------------------------------------
+\end{document}
